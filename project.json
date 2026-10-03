@@ -13,5 +13,17 @@
     "end": "2026-10-05T10:00"
   },
   "kind": "booking",
-  "port": 8103
+  "port": 8103,
+  "description": "Reserve shared resources with conflict-free scheduling.",
+  "accent": "#7c3aed",
+  "stack": [
+    "Python",
+    "FastAPI",
+    "Angular",
+    "TypeScript",
+    "SQLite",
+    "Docker",
+    "Kubernetes",
+    "GitHub Actions"
+  ]
 }
