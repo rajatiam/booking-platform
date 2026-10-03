@@ -1,0 +1,17 @@
+{
+  "name": "Booking Desk",
+  "skills": "Scheduling, conflict detection, business rules",
+  "entity": "booking",
+  "fields": [
+    "resource",
+    "start",
+    "end"
+  ],
+  "example": {
+    "resource": "Meeting room",
+    "start": "2026-10-05T09:00",
+    "end": "2026-10-05T10:00"
+  },
+  "kind": "booking",
+  "port": 8103
+}
