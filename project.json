@@ -1,5 +1,5 @@
 {
-  "name": "Booking Desk",
+  "name": "Booking Platform",
   "skills": "Scheduling, conflict detection, business rules",
   "entity": "booking",
   "fields": [
@@ -25,5 +25,7 @@
     "Docker",
     "Kubernetes",
     "GitHub Actions"
-  ]
+  ],
+  "slug": "booking-platform",
+  "engineering_version": "3.0.0"
 }

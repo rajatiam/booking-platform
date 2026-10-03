@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
-  name: 03-booking-desk-data
+  name: booking-platform-data
 spec:
   accessModes: [ReadWriteOnce]
   resources:
@@ -11,18 +11,18 @@ spec:
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: 03-booking-desk
+  name: booking-platform
 spec:
   replicas: 1
   strategy:
     type: Recreate
   selector:
     matchLabels:
-      app: 03-booking-desk
+      app: booking-platform
   template:
     metadata:
       labels:
-        app: 03-booking-desk
+        app: booking-platform
     spec:
       securityContext:
         runAsNonRoot: true
@@ -30,7 +30,7 @@ spec:
         fsGroup: 10001
       containers:
         - name: app
-          image: 03-booking-desk:local
+          image: booking-platform:local
           imagePullPolicy: IfNotPresent
           ports:
             - containerPort: 8103
@@ -60,15 +60,15 @@ spec:
       volumes:
         - name: data
           persistentVolumeClaim:
-            claimName: 03-booking-desk-data
+            claimName: booking-platform-data
 ---
 apiVersion: v1
 kind: Service
 metadata:
-  name: 03-booking-desk
+  name: booking-platform
 spec:
   selector:
-    app: 03-booking-desk
+    app: booking-platform
   ports:
     - port: 80
       targetPort: 8103
